@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>HayProject</title>
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/loading.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/projects.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <script src="assets/js/jquery-3.6.3.min.js"></script>
+  <script src="assets/js/font-awesome.min.js"></script>
+  <script src="assets/js/loading.js"></script>
+</head>
+
+<body>
+  <div class="loading">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <main>
+    <section id="home">
+
+      <header class="main-header" id="sticky">
+        <article class="title">HayProject</article>
+        <label>
+          <input id="checkbox" type="checkbox">
+          <span class="menu">
+            <span class="hamburger"></span>
+          </span>
+          <ul id="navbar">
+            <li><a onclick="route('home')">Anasayfa</a></li>
+            <li><a onclick="route('about')">Hakkımda</a></li>
+            <li><a onclick="route('projects')">Projelerim</a></li>
+            <li><a onclick="route('contact')">İletişim</a></li>
+          </ul>
+        </label>
+      </header>
+
+      <div id="welcome">
+        <span>- SİTEME HOŞGELDİNİZ -</span>
+        <h1 id="welcome-title">
+          Merhaba, ben HayProject.<br>
+          <p class="animate-text" style="overflow: hidden;">
+            <span>Web Developer</span>
+            <span>Mobile Developer</span>
+            <span>Desktop Developer</span>
+          </p>
+        </h1>
+        <h2>..........</h2>
+      </div>
+    </section>
+    <section id="about">
+      <div class="container">
+        <div id="about_name">
+          <div id="resim"></div>
+          <h1>İsim Soyisim
+            <p>Developer</p>
+          </h1>
+        </div>
+        <div id="about_desc">
+          <h1>Ben Kimim?</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sit
+            porro nobis? Magni inventore neque unde harum aspernatur. Soluta,
+            perspiciatis reprehenderit facere fugiat aliquid blanditiis
+            doloribus quam accusantium expedita vel!
+          </p>
+          <div>
+            <ul>
+              <li class="hover-underline-animation" id="a_skills" onclick="about_select('skills')">
+                Yetenekler
+              </li>
+              <li class="hover-underline-animation" id="a_exp" onclick="about_select('exp')">
+                Deneyimler
+              </li>
+              <li class="hover-underline-animation" id="a_edu" onclick="about_select('edu')">
+                Eğitim&Sertifika
+              </li>
+            </ul>
+            <div id="p_skills">
+              <p>
+                asfiöasf
+                asfasf
+              </p>
+            </div>
+            <div id="p_exp">
+              <p>asfs</p>
+            </div>
+            <div id="p_edu">
+              <p>jıoşaspjof</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <h1>Projelerim</h1>
+      <div id="cards">
+        <div id="card1" class="card">
+          <div id="content1">
+            <p style="font-size: 25px;margin-bottom: 10px;">Type</p>
+            <h2 style="font-size: 40px;margin-bottom: 20px;">Proje1</h2>
+            <a class="button">Devamı..</a>
+          </div>
+        </div>
+        <div id="card2" class="card">
+          <div id="content2">
+            <p style="font-size: 25px;margin-bottom: 10px;">Type</p>
+            <h2 style="font-size: 40px;margin-bottom: 20px;">Proje2</h2>
+            <a class="button">Devamı..</a>
+          </div>
+        </div>
+        <div id="card3" class="card">
+          <div id="content3">
+            <p style="font-size: 25px;margin-bottom: 10px;">Type</p>
+            <h2 style="font-size: 40px;margin-bottom: 20px;">Proje3</h2>
+            <a class="button">Devamı..</a>
+          </div>
+        </div>
+      </div>
+      <a class="button btn2" style="margin: auto;">Daha Fazlası..</a>
+    </section>
+    <section id="contact">
+      <article class="contact-left">
+        <h3>İsteğinizi gönderin.</h3>
+        <div class="center-screen">
+          <form action="contact.php" method="POST">
+            <div class="input-row">
+              <div class="input-group">
+                <input type="text" name="firstname" placeholder="İsim" required>
+              </div>
+              <div class="input-group">
+                <input type="tel" name="phone" placeholder="Telefon">
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-group">
+                <input type="email" name="email" placeholder="E-Posta" required>
+              </div>
+              <div class="input-group">
+                <input type="text" name="subject" placeholder="Konu" required>
+              </div>
+            </div>
+            <textarea rows="5" name="message" placeholder="Mesaj"></textarea>
+            <button type="submit" class="button">Gönder</button>
+          </form>
+        </div>
+      </article>
+      <article class="contact-right">
+        <div>
+          <h3>&gt; Bana ulaşın.</h3>
+          <ul>
+            <li>
+              <p>E-Posta</p>
+              <p>hayproject@hayproject.site</p>
+            </li>
+            <li>
+              <p>Telefon</p>
+              <p>+90 5xx xxx xx xx</p>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <a href="#" id="back"></a>
+  </main>
+  <script src="assets/js/about.js"></script>
+  <script src="assets/js/home.js"></script>
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/navigation.js"></script>
+</body>
+
+</html>

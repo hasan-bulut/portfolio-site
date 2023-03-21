@@ -1,0 +1,166 @@
+:root {
+  --scale: 0;
+  --color: white;
+}
+
+#about {
+  width: 100%;
+  height: 100vh;
+  background-color: #191919;
+}
+
+#about .container {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  background-color: #191919;
+  color: white;
+}
+
+#about_name {
+  width: 40%;
+  position: relative;
+  bottom: 100px;
+}
+
+#about_name #resim {
+  width: 90%;
+  height: 90vh;
+  background: linear-gradient(145deg, #f81f01, #ee076e);
+  margin: auto;
+  border-radius: 10px;
+}
+
+#about_name h1 {
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#about_name h1 p {
+  font-weight: lighter;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#about_desc {
+  width: 60%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+#about_desc h1 {
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+
+#about_desc p {
+  font-size: 20px;
+  width: 90%;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#about_desc div {
+  display: inline;
+}
+
+#about_desc div ul {
+  list-style-type: none;
+  display: inline-flex;
+  margin-top: 30px;
+}
+
+#about_desc div ul li {
+  width: 170px;
+}
+
+#a_skills,
+#a_exp,
+#a_edu {
+  position: relative;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  transition: transform 0.25s ease-out;
+}
+
+#a_skills::after,
+#a_exp::after,
+#a_edu::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(var(--scale));
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color);
+  color: var(--color);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+  -webkit-transform: scaleX(var(--scale));
+  -moz-transform: scaleX(var(--scale));
+  -ms-transform: scaleX(var(--scale));
+  -o-transform: scaleX(var(--scale));
+}
+
+#p_skills,
+#p_exp,
+#p_edu {
+  background-color: #1d1d24;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  #about .container {
+    flex-direction: column;
+  }
+
+  #about_name {
+    width: 100%;
+  }
+
+  #about_name #resim {
+    height: 50vh;
+  }
+
+  #about_desc {
+    width: 100%;
+    position: relative;
+    bottom: 100px;
+    margin: auto;
+    text-align: center;
+  }
+
+  #about_desc h1 {
+    font-size: 40px;
+  }
+
+  #about_desc p {
+    font-size: 15px;
+    width: 100%;
+  }
+
+  #about_desc div ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  #about_desc div ul li {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  #a_skills,
+  #a_exp,
+  #a_edu {
+    font-size: 15px;
+  }
+}

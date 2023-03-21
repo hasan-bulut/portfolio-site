@@ -1,0 +1,141 @@
+:root {
+  --header-color: #1d1d24;
+  --home-color: #1d1d24;
+  --header-text-color: white;
+  --hover-color: #f9004d;
+  --gray-color: rgba(198, 201, 216, .75);
+}
+
+#home .main-header {
+  height: 10vh;
+  background-color: var(--header-color);
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 60px;
+}
+
+#home {
+  background-color: var(--home-color);
+  height: 100vh;
+}
+
+.title {
+  float: left;
+  color: var(--hover-color);
+  text-align: center;
+  padding: 12px;
+  line-height: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+}
+
+.title:hover,
+#home header ul li a:hover {
+  color: var(--hover-color);
+  transition: 0.5s;
+}
+
+#home header ul {
+  padding: 12px;
+  line-height: 25px;
+  float: right;
+  display: flex;
+}
+
+#home header ul li a {
+  font-size: 20px;
+  padding-right: 50px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: var(--header-text-color);
+}
+
+#welcome {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  font-weight: bold;
+  color: white;
+  padding-left: 10px;
+}
+
+#welcome>span {
+  font-size: 15px;
+  color: var(--gray-color);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#welcome-title {
+  font-size: 54px;
+  line-height: 68px;
+  color: white;
+  margin: 20px 0px;
+}
+
+#welcome h2 {
+  font-size: 50px;
+  color: white;
+}
+
+.animate-text span {
+  background: linear-gradient(145deg, #f81f01, #ee076e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: none;
+
+}
+
+.animate-text span.text-in {
+  display: block;
+  animation: textIn .3s ease-out;
+}
+
+#home #home header ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--hover-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+#home header ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#home>.images {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes textIn {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+#sticky {
+  width: 100%;
+  position: fixed;
+  transition: 0.3s ease;
+  z-index: 10;
+}
